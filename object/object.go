@@ -7,6 +7,7 @@ import (
 
 // Object represents a digital image of the picture the program should detect
 type Object interface {
+	// Compute statistical information from the current Object
 	Compute(bitset bitset.BitSet, s stat.Statistics) error
 }
 

@@ -9,6 +9,8 @@ type Reader interface{
 	/*
 		title - name of the object
 		style - subtype of the object
+		vicinity - environment data
+	    context  - goroutine dependant data
 	*/
 	Read(title string,style string,v vicin.Vicinity, context context.Context)
 }
