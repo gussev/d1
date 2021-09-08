@@ -11,3 +11,7 @@ type Object interface {
 	Compute(bitset bitset.BitSet, s stat.Statistics) error
 }
 
+type Object_Key interface {
+	Mine(other Object_Key)bool
+}
+
