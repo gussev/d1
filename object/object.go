@@ -9,6 +9,7 @@ import (
 type Object interface {
 	// Compute statistical information from the current Object
 	Compute(bitset bitset.BitSet, s stat.Statistics) error
+	Key() Object_Key
 }
 
 type Object_Key interface {
