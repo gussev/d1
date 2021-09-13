@@ -1,14 +1,16 @@
 package vicin
 
 import (
-	"image"
-	"image/color"
+	"database/sql"
 	"github.com/gussev/d1/core/cache"
 	"github.com/gussev/d1/core/tool"
+	"image"
+	"image/color"
 )
 
 // Vicinity represents environment parameters read from a configuration file
 type Vicinity interface{
+	DB(key string) *sql.DB
 	Put(key string,value interface{} )
 	Rectangle(key string) tool.Rectangle
 	// Reader cycle dependencies are not allowed in Go, instead of interface{} should be Reader
